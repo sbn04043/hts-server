@@ -14,6 +14,10 @@ export default class Order extends Model {
   @Column(DataType.STRING(20))
   type: 'buy' | 'sell';
 
+  @AllowNull(false)
+  @Column(DataType.STRING(20))
+  status: 'order' | 'confirm' | 'cancel';
+
   @ForeignKey(() => StockItem)
   @Column
   stockItemId: bigint;
