@@ -14,7 +14,7 @@ export default class StockItemHistory extends Model {
 
   @AllowNull(false)
   @Column(DataType.DATEONLY)
-  data: Date;
+  date: Date;
 
   @AllowNull(false)
   @Column
